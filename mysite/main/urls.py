@@ -7,4 +7,5 @@ urlpatterns = [
     path('api/<str:name_request>', views.api_test, name='api'),
     path('add_memory/', views.add_memory, name='add_memory'),
     path('check_memory/', views.check_memory, name='check_memory'),
+    path('memory_form/', views.get_memory, name='memory_form'),
 ]

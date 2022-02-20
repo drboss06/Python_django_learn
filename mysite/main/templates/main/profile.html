@@ -16,19 +16,23 @@
             </thead>
             <tbody>
             {% for mem in latest_memories_list %}
-
-            <th scope="row">{{ mem.id }}</th>
+            <tr>
             <td>{{ mem.name_memorie }}</td>
             <td>{{ mem.date_memorie }}</td>
             <td>#</td>
-
+            </tr>
             {% endfor %}
             </tbody>
         </table>
 
-      {% else %}
-        <p class="lead">У вас нет ни одного воспоминания</p>
-      {% endif %}
+{% else %}
+        <p class="lead" align="center">У вас нет ни одного воспоминания</p>
+{% endif %}
+
+<div class="d-grid gap-2 d-md-block">
+  <a class="btn btn-primary" type="button" href="{% url 'main:add_memory' %}">Добавить воспоминания</a>
+</div>
+
 </body>
 
 </html>
